@@ -1,8 +1,11 @@
-# Coinberg Hackathon - Time series problem statement
+# Coinberg Hackathon - 
+CryptoCurrency Time series problem statement
 
-# Problem statament: Forecasting Crypto currency values using Time Series for next 30 days
+# Problem statament: 
+Forecasting Crypto currency values using Time Series for next 30 days
 
-# Data used :- Bitcoin, Cardano, Ethereum, Ripple, Tron
+# Data used :- 
+Bitcoin, Cardano, Ethereum, Ripple, Tron
 
 # Approach:-
 -Got the data from Coinberg API
