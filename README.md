@@ -15,7 +15,7 @@ Bitcoin, Cardano, Ethereum, Ripple, Tron
 # Data Engineering:-
 -Derived a column named returns which calculates the returns in percentage based on previous days and current days closing price
 
--Included USD and EUR currency data for each date in the dataset since internation currence also affects the price of the cryto currencies
+-Included USD and EUR currency data + gold prices for each date in the dataset since each of them also affects the price of the cryto currencies
 
 -Downloaded all the tweets of official crypto currence handles with favourites and retweets
 
