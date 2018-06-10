@@ -4,22 +4,33 @@ CryptoCurrency Time series problem statement
 # Problem statament: 
 Forecasting Crypto currency values using Time Series for next 30 days
 
-# Data used :- 
-Bitcoin, Cardano, Ethereum, Ripple, Tron
+# Data Given :- 
+Bitcoin, Cardano, Ethereum, Ripple, Tron (source Coinberg API)
 
-# Approach:-
--Got the data from Coinberg API 
+# Setup 
+data folder : contains all price files and other data (tweets for each currency, gold , eur prices)
 
--Checked the data, found some null values in files, so treated and cleaned the null values
+install : ta-lib, textblob
 
-# Data Engineering:-
--Derived a column named returns which calculates the returns in percentage based on previous days and current days closing price
+# Approvh 
+Use of regression models for timeseries forecasting. 
 
--Included USD and EUR currency data + gold prices for each date in the dataset since each of them also affects the price of the cryto currencies
+Based on historical information, prices for each day of the next months are predicted .
 
--Downloaded all the tweets of official crypto currence handles with favourites and retweets
+# Features used :
 
-# Models tried:-
+Price Data: 'Close', 'High', 'Low', 'Market Cap', 'Open','Volume',
+
+Previous days returns : 'PrevRet_1day', 'PrevRet_3day', 'PrevRet_5day','PrevRet_15day',
+
+Moving Averages :   'SMA_30', 'SMA_40', 'SMA_50', 'EMA_30', 'EMA_40','EMA_50',
+
+Previous days EUR and gold returns: 'PrevRet_1_day_EUR', 'PrevRet_3_day_EUR', 'PrevRet_5_day_EUR', 'PrevRet_1_day_Gold', 'PrevRet_3_day_Gold', 'PrevRet_5_day_Gold',
+
+TweetSentiments :         'tweet_sentiment_score'  (calculated using tweet polarity * subjectivity * (# of likes + # of retweets)
+
+
+# Models Used:-
 -Linear Regression
 
 -Lasso Regression
@@ -34,3 +45,7 @@ Bitcoin, Cardano, Ethereum, Ripple, Tron
 
 # Final Model used:-
 - RandomForest Regressor
+
+# Results
+ 30day_predictions_May23Prices.txt contains 30 day projections based on data avaialable till may 23, 2018
+ 
